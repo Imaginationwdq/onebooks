@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wdq.onebook.dao.MouseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wdq.onebook.entity.MouseEntity" id="mouseMap">
+        <result property="mouseId" column="mouse_id"/>
+        <result property="name" column="name"/>
+        <result property="num" column="num"/>
+        <result property="time" column="time"/>
+    </resultMap>
+
+    <insert id="addClick">
+        INSERT INTO ob_mouse ( name, num )
+         VALUES ( #{clickName} ,#{num} );
+    </insert>
+    <update id="updateClick">
+        UPDATE ob_mouse
+        SET num = #{num}
+        where mouse_id = #{mouseId}
+    </update>
+    <select id="selectOne" resultType="com.wdq.onebook.entity.MouseEntity">
+        select *
+        from ob_mouse
+        where name = #{clickName}
+        order by time desc
+        limit 0,1;
+    </select>
+    <select id="selectTop" resultType="com.wdq.onebook.entity.MouseEntity">
+        select *
+        from ob_mouse
+        order by time desc
+        limit 0,1;
+    </select>
+
+
+</mapper>

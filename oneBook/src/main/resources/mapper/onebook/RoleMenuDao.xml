@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wdq.onebook.dao.RoleMenuDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wdq.onebook.entity.RoleMenuEntity" id="roleMenuMap">
+        <result property="roleMenuId" column="role_menu_id"/>
+        <result property="roleId" column="role_id"/>
+        <result property="menuId" column="menu_id"/>
+        <result property="updateAccount" column="update_account"/>
+    </resultMap>
+    <select id="getRoleMenuTreeList" resultType="com.wdq.onebook.entity.vo.MenuRolemenuVO">
+        select
+            orm.role_menu_id,
+            orm.role_id,
+            orm.menu_id,
+            orm.update_account,
+            om.auth_name,
+            om.parent,
+            om.top
+        from ob_role_menu orm
+        left join ob_menu om on orm.menu_id = om.menu_id
+        where
+            om.status = 1
+            and orm.role_id = ${roleId}
+        order by om.sort asc
+
+    </select>
+
+
+</mapper>
