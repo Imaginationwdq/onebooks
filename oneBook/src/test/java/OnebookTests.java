@@ -437,8 +437,12 @@ public class OnebookTests {
 
     @Test
     public void testDate(){
-        Date t = new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-        String format = df.format(t);
+        
+
+
+
+
     }
+
+
 }
