@@ -385,8 +385,8 @@ public class OnebookTests {
         // Endpoint以杭州为例，其它Region请按实际情况填写。
         String endpoint = "oss-cn-beijing.aliyuncs.com";
         // 云账号AccessKey有所有API访问权限，建议遵循阿里云安全最佳实践，创建并使用RAM子账号进行API访问或日常运维，请登录 https://ram.console.aliyun.com 创建。
-        String accessKeyId = "LTAI4GHHiRnein4tYiU1UoSW";
-        String accessKeySecret = "Kwii7cX57ZyMgaFJTYqVOIrGX6e7GL";
+        String accessKeyId = "LTAI4GHHiRnein--------------4tYiU1UoSW";
+        String accessKeySecret = "Kwii7cX57ZyMga-----------FJTYqVOIrGX6e7GL";
         String bucketName = "onebook-wdq";
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
