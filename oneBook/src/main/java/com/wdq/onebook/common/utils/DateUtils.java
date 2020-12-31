@@ -20,13 +20,21 @@ public class DateUtils {
 	public final static String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
     /**
+     * 获取当前时间
+     * @return
+     */
+    public static Date getCurrentDate() {
+        return new Date();
+    }
+
+    /**
      * 日期格式转换   TO yyyy-MM-dd
      * @throws ParseException
      */
     public static java.sql.Date dealDateFormat(Date oldDateStr,String formate) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat(formate);
         //格式化成yyyy-MM-dd格式的时间字符串
-        String strDate= sdf.format(oldDateStr );
+        String strDate= sdf.format(oldDateStr);
         Date newDate =sdf.parse(strDate);
         return new java.sql.Date(newDate.getTime());
     }

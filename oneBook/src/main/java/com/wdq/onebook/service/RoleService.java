@@ -19,5 +19,8 @@ public interface RoleService extends IService<RoleEntity> {
 
     //根据rolename查询角色信息
     RoleEntity getRoleInfoByRoleName(String roleName);
+
+    // 根据roleId查询角色信息
+    RoleEntity getRoleInfoByRoleId(int roleId);
 }
 

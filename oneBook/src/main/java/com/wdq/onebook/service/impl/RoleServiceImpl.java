@@ -43,4 +43,16 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, RoleEntity> implements
                         .eq("name", roleName));
     }
 
+    /**
+     * 根据roleId查询角色信息
+     * @param roleId
+     * @return
+     */
+    @Override
+    public RoleEntity getRoleInfoByRoleId(int roleId) {
+        return baseMapper.selectOne(
+                new QueryWrapper<RoleEntity>()
+                        .eq("role_id", roleId));
+    }
+
 }

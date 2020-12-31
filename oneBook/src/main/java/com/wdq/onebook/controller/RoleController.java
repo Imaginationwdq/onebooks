@@ -82,6 +82,7 @@ public class RoleController {
         if (role != null) {
             return R.error("该角色已存在，请更换角色名称！");
         }
+        String token = request.getHeader("token");
         String username = tokenManager.getUserInfoFromToken(request.getHeader("token"));
         String roleRemake = (String) params.get("roleRemake");
         RoleEntity roleEntity = new RoleEntity();
