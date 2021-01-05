@@ -25,10 +25,14 @@ public class UsersServiceImpl extends ServiceImpl<UsersDao, UsersEntity> impleme
     @Override
     public PageUtils queryPage(Map<String, Object> params) throws ParseException {
         String username = (String)params.get("username");
+        String status = (String) params.get("status");
+        String roleName = (String) params.get("roleName");
         IPage<UsersEntity> page = this.page(
                 new Query<UsersEntity>().getPage(params),
                 new QueryWrapper<UsersEntity>()
                         .like(StringUtils.isNotBlank(username),"username", username)
+                        .like(StringUtils.isNotBlank(roleName),"role_name", roleName)
+                        .eq(!org.springframework.util.StringUtils.isEmpty(status),"status",status)
         );
         List<UsersEntity> users = page.getRecords();
         //对出生日期的时间格式进行处理，转换成 yyyy-MM-dd 格式
@@ -37,7 +41,6 @@ public class UsersServiceImpl extends ServiceImpl<UsersDao, UsersEntity> impleme
             if (birthday == null) continue;
             user.setBirthday(DateUtils.dealDateFormat(birthday,DateUtils.DATE_PATTERN));
         }
-
         return new PageUtils(page);
     }
 

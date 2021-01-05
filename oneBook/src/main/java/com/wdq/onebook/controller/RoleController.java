@@ -1,8 +1,11 @@
 package com.wdq.onebook.controller;
 
+import java.text.ParseException;
 import java.util.*;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.wdq.onebook.common.utils.DateUtils;
 import com.wdq.onebook.components.TokenManager;
 import com.wdq.onebook.entity.MenuEntity;
 import com.wdq.onebook.entity.RoleMenuEntity;
@@ -12,6 +15,7 @@ import com.wdq.onebook.service.MenuService;
 import com.wdq.onebook.service.RoleMenuService;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import com.wdq.onebook.entity.RoleEntity;
@@ -156,5 +160,27 @@ public class RoleController {
         roleMenuService.saveBatch(roleMenus);
 
         return R.ok("权限分配成功");
+    }
+
+    /**
+     * 更新状态
+     */
+    @RequestMapping("/updateStatusByRoleId")
+    public R updateStatusByRoleId(@RequestParam Map<String, Object> params,HttpServletRequest request) throws ParseException {
+        // 先查询账号是否存在
+        Integer roleId = Integer.parseInt((String)params.get("roleId"));
+        Integer status = Integer.parseInt((String)params.get("status"));
+        if(StringUtils.isEmpty(roleId) ||StringUtils.isEmpty(status)) return R.error("系统错误");
+        RoleEntity role = roleService.getById(roleId);
+        if(role == null) return R.error("角色不存在！");
+        if(role.getStatus().equals(status)) return R.ok("更新成功！");
+        // 更新状态
+        role.setStatus(status);
+        String usernameAdmin = tokenManager.getUserInfoFromToken(request.getHeader("token"));
+        role.setUpdateAccount(usernameAdmin);
+        role.setUpdateTime(DateUtils.getCurrentDate());
+        boolean b = roleService.update(role, new UpdateWrapper<RoleEntity>().eq("role_id", roleId));
+        if (b) return R.ok("更新成功！");
+        return R.error("更新失败！");
     }
 }

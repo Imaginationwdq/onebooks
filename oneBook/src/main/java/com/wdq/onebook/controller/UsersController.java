@@ -59,7 +59,7 @@ public class UsersController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
+    @PostMapping("/list")
     public R list(@RequestParam Map<String, Object> params) throws ParseException {
         PageUtils page = usersService.queryPage(params);
 
