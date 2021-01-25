@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wdq.onebook.dao.CategoryDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wdq.onebook.entity.CategoryEntity" id="CategoryMap">
+        <result property="categoryId" column="category_id"/>
+        <result property="categoryName" column="category_name"/>
+        <result property="parameterId" column="parameter_id"/>
+        <result property="propertyId" column="property_id"/>
+        <result property="parent" column="parent"/>
+        <result property="top" column="top"/>
+        <result property="level" column="level"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+
+</mapper>
