@@ -30,14 +30,6 @@ public class CategoryEntity implements Serializable {
 	 */
 	private String categoryName;
 	/**
-	 * 动态参数编号
-	 */
-	private Integer parameterId;
-	/**
-	 * 静态属性编号
-	 */
-	private Integer propertyId;
-	/**
 	 * 分类上级编号(-1:最顶级)
 	 */
 	private Integer parent;

@@ -12,16 +12,14 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="oneBook" target="1.8" />
-      <module name="oneBooks" target="1.5" />
-      <module name="renren-fast" target="1.5" />
-      <module name="renren-generator" target="1.5" />
+      <module name="oneBooks" target="1.8" />
+      <module name="renren-fast" target="1.8" />
+      <module name="renren-generator" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="oneBook" options="-parameters" />
-      <module name="renren-fast" options="-parameters" />
-      <module name="renren-generator" options="-parameters" />
     </option>
   </component>
 </project>

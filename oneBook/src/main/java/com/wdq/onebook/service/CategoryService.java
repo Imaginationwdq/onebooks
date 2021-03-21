@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wdq.onebook.entity.CategoryEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,4 +22,9 @@ public interface CategoryService extends IService<CategoryEntity> {
      */
     IPage<CategoryEntity> getTreeList(Map<String, Object> params);
 
+    /**
+     * 获取所有的子分类
+     * @param cates
+     */
+    void dealChildren(List<CategoryEntity> cates);
 }

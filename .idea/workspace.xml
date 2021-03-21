@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87319bb8-596a-4925-9590-003df778eead" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookParameterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookPropertyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/ParameterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/PropertyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/dao/BookParameterDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/dao/BookPropertyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/dao/ParameterDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/dao/PropertyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookParameterEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookPropertyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/ParameterEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/PropertyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/BookParameterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/BookPropertyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/ParameterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/PropertyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/BookParameterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/BookPropertyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/ParameterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/PropertyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/BookParameterDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/BookPropertyDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/ParameterDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/PropertyDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oneBook/src/test/java/pdfTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/components/TokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/components/TokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/BookListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookDetailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookDetailEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookListEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/BookListEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/entity/CategoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/BookListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/BookListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/java/com/wdq/onebook/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/CategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook/CategoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/bookdetail-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/bookdetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/booklist-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/booklist.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/icon-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/icon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/menu-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/menu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/mouse-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/mouse.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/role-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/role.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/rolemenu-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/rolemenu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/users-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/main/resources/src/views/modules/onebook/users.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/src/test/java/OnebookTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/src/test/java/OnebookTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/components/TokenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/components/TokenManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/controller/BookDetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/controller/BookDetailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/controller/BookListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/controller/BookListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/entity/BookDetailEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/entity/BookDetailEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/entity/BookListEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/entity/BookListEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/service/impl/BookListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/classes/com/wdq/onebook/service/impl/BookListServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/bookdetail-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/bookdetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/booklist-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/booklist.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/icon-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/icon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/menu-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/menu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/mouse-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/mouse.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/role-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/role.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/rolemenu-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/rolemenu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/users-add-or-update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/classes/src/views/modules/onebook/users.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oneBook/target/test-classes/OnebookTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/oneBook/target/test-classes/OnebookTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\my_java\maven\repository3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\my_java\maven\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pTOiLPOOsnUdibAGW3Ec5mBs85" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/oneBook/src/main/resources/mapper/onebook" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wdq.onebook.dao" />
+      <recent name="com.wdq.onebook.service.impl" />
+      <recent name="com.wdq.onebook.service" />
+      <recent name="com.wdq.onebook.controller" />
+      <recent name="com.wdq.onebook.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my_java\bysj\oneBook\onebooks\oneBook\src\main\resources\mapper\onebook" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.oneBookApplication">
+    <configuration name="OnebookTests.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oneBook" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OnebookTests" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnebookTests.testUploaded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oneBook" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OnebookTests" />
+      <option name="METHOD_NAME" value="testUploaded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pdfTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oneBook" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="pdfTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="renren-generator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="renren-generator" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="oneBookApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="oneBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wdq.onebook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wdq.onebook.oneBookApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.oneBookApplication" />
+        <item itemvalue="JUnit.pdfTest.test" />
+        <item itemvalue="JUnit.OnebookTests.testDelete" />
+        <item itemvalue="JUnit.OnebookTests.testUploaded" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87319bb8-596a-4925-9590-003df778eead" name="Default Changelist" comment="" />
+      <created>1615203740260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615203740260</updated>
+      <workItem from="1615203748729" duration="11706000" />
+      <workItem from="1615772706356" duration="46366000" />
+      <workItem from="1616290548638" duration="6289000" />
+      <workItem from="1616307471643" duration="6446000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615203866250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615203866250" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1615978910176">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1615978910176" />
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615879677195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615879677195" />
+    <state width="409" height="466" key="DebuggerActiveHint" timestamp="1616291627667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="409" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1616291627667" />
+    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1615203841218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615203841218" />
+    <state width="1877" height="384" key="GridCell.Tab.0.bottom" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.0.center" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.0.left" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.0.right" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.1.bottom" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.1.center" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.1.left" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.1.right" timestamp="1616329838602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838602" />
+    <state width="1877" height="384" key="GridCell.Tab.2.bottom" timestamp="1616329838599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838599" />
+    <state width="1877" height="384" key="GridCell.Tab.2.center" timestamp="1616329838599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838599" />
+    <state width="1877" height="384" key="GridCell.Tab.2.left" timestamp="1616329838599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838599" />
+    <state width="1877" height="384" key="GridCell.Tab.2.right" timestamp="1616329838599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="384" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616329838599" />
+    <state x="463" y="164" key="SettingsEditor" timestamp="1615203862814">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1615203862814" />
+    <state x="334" y="336" width="1120" height="548" key="find.popup" timestamp="1615886071991">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="336" width="1120" height="548" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615886071991" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616313106478">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616313106478" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/oneBooks$pdfTest_test.ic" NAME="pdfTest.test Coverage Results" MODIFIED="1616308678469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

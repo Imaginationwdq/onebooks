@@ -26,29 +26,24 @@ public class BookDetailEntity implements Serializable {
 	@TableId
 	private Integer bookId;
 	/**
+	 * 分类编号
+	 */
+	private Integer categoryId;
+	/**
 	 * 书名
 	 */
 	private String title;
-	/**
-	 * ISBN
-	 */
-	private String isbn;
+
 	/**
 	 * 作者
 	 */
 	private String author;
-	/**
-	 * 出版社
-	 */
-	private String publisher;
+
 	/**
 	 * 图书标价
 	 */
-	private BigDecimal price;
-	/**
-	 * 用户定价
-	 */
-	private BigDecimal userPrice;
+	private double price;
+
 	/**
 	 * 描述
 	 */

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wdq.onebook.dao.BookParameterDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wdq.onebook.entity.BookParameterEntity" id="BookParameterMap">
+        <result property="bookParameterId" column="book_parameter_id"/>
+        <result property="bookId" column="book_id"/>
+        <result property="parameterId" column="parameter_id"/>
+        <result property="parameterTag" column="parameter_tag"/>
+    </resultMap>
+
+</mapper>

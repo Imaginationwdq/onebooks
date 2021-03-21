@@ -1,5 +1,6 @@
 package com.wdq.onebook.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -45,4 +46,6 @@ public class BookListEntity implements Serializable {
 	 */
 	private Date createTime;
 
+	@TableField(exist = false)
+	private BookDetailEntity bookDetail;
 }

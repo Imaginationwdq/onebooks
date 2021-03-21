@@ -1,21 +1,21 @@
 package com.wdq.onebook.controller;
 
-import java.util.Arrays;
+import java.text.ParseException;
+import java.util.List;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.wdq.onebook.entity.BookListEntity;
-import com.wdq.onebook.service.BookListService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.wdq.onebook.components.TokenManager;
+import com.wdq.onebook.entity.*;
+import com.wdq.onebook.service.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import com.wdq.onebook.common.utils.PageUtils;
 import com.wdq.onebook.common.utils.R;
 
+import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -31,60 +31,71 @@ public class BookListController {
     @Autowired
     private BookListService bookListService;
 
+    @Autowired
+    private BookDetailService bookDetailService;
+
+    @Autowired
+    private TokenManager tokenManager;
+
+    @Autowired
+    private UsersService usersService;
+
+    @Autowired
+    private BookParameterService bookParameterService;
+
+    @Autowired
+    private BookPropertyService bookPropertyService;
+
     /**
      * 列表
      */
-    @RequestMapping("/list")
-    @RequiresPermissions("onebook:booklist:list")
-    public R list(@RequestParam Map<String, Object> params){
+    @PostMapping("/list")
+    public R list(@RequestParam Map<String, Object> params, HttpServletRequest request) throws ParseException {
+        String username = tokenManager.getUserInfoFromToken(request.getHeader("token"));
+        if (username.contains("用户") || username.contains("会员")) {
+            UsersEntity user = usersService.getOne(new QueryWrapper<UsersEntity>().eq("username", username));
+            params.put("userId", user.getUserId());
+        }
+
         PageUtils page = bookListService.queryPage(params);
+        List<BookListEntity> list = (List<BookListEntity>) page.getList();
+
+        String title = (String) params.get("title");
+
+        for (int i = 0; i < list.size(); i++) {
+            BookListEntity bookListEntity = list.get(i);
+            BookDetailEntity bookDetailEntity = bookDetailService.getById(bookListEntity.getBookId());
+            if (bookDetailEntity.getTitle().contains(title)) {
+                bookListEntity.setBookDetail(bookDetailEntity);
+            } else {
+                list.remove(i);
+                i--;
+            }
+        }
 
         return R.ok().put("page", page);
     }
 
-
-    /**
-     * 信息
-     */
-    @RequestMapping("/info/{bookListId}")
-    @RequiresPermissions("onebook:booklist:info")
-    public R info(@PathVariable("bookListId") Integer bookListId){
-		BookListEntity bookList = bookListService.getById(bookListId);
-
-        return R.ok().put("bookList", bookList);
-    }
-
-    /**
-     * 保存
-     */
-    @RequestMapping("/save")
-    @RequiresPermissions("onebook:booklist:save")
-    public R save(@RequestBody BookListEntity bookList){
-		bookListService.save(bookList);
-
-        return R.ok();
-    }
-
-    /**
-     * 修改
-     */
-    @RequestMapping("/update")
-    @RequiresPermissions("onebook:booklist:update")
-    public R update(@RequestBody BookListEntity bookList){
-		bookListService.updateById(bookList);
-
-        return R.ok();
-    }
-
-    /**
-     * 删除
-     */
-    @RequestMapping("/delete")
-    @RequiresPermissions("onebook:booklist:delete")
-    public R delete(@RequestBody Integer[] bookListIds){
-		bookListService.removeByIds(Arrays.asList(bookListIds));
-
-        return R.ok();
+    @PostMapping("/removeById")
+    public R removeById(@RequestParam Map<String, Object> params){
+        String bookId = (String)params.get("bookId");
+        boolean b = bookDetailService.remove(new QueryWrapper<BookDetailEntity>().eq("book_id", bookId));
+        if (!b) {
+            return R.error("删除失败");
+        }
+        b = bookListService.remove(new QueryWrapper<BookListEntity>().eq("book_id", bookId));
+        if (!b) {
+            return R.error("删除失败");
+        }
+        b = bookParameterService.remove(new QueryWrapper<BookParameterEntity>().eq("book_id", bookId));
+        if (!b) {
+            return R.error("删除失败");
+        }
+        b = bookPropertyService.remove(new QueryWrapper<BookPropertyEntity>().eq("book_id", bookId));
+        if (!b) {
+            return R.error("删除失败");
+        }
+        return R.ok("删除成功");
     }
 
 }

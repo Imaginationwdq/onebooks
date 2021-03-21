@@ -1,8 +1,6 @@
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.itextpdf.text.pdf.PdfWriter;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Test;
@@ -276,7 +274,6 @@ public class OnebookTests {
         return cell;
     }
 
-
     /**
      * 测试读取excel并操作excel
      * 测试excel -> zip
@@ -384,53 +381,36 @@ public class OnebookTests {
     public void testUploaded() throws IOException {
         // Endpoint以杭州为例，其它Region请按实际情况填写。
         String endpoint = "oss-cn-beijing.aliyuncs.com";
-        // 云账号AccessKey有所有API访问权限，建议遵循阿里云安全最佳实践，创建并使用RAM子账号进行API访问或日常运维，请登录 https://ram.console.aliyun.com 创建。
-        String accessKeyId = "";
-        String accessKeySecret = "";
+        String accessKeyId = "LTAI4Fyn7XUM54taNPEggjkx";
+        String accessKeySecret = "AFJufOvaKeCie9PmthohuUBcu0xom4";
         String bucketName = "onebook-wdq";
+        String objectName = "user/123.txt";
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
-//---------------------------------------------------------------------------------------------------------------------
-        // copy文件到zip输出流中
-        int len;
-        byte[] buf = new byte[1024];
-        int cnt = 1;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        ZipOutputStream zos = new ZipOutputStream(out);
-        // 1、读取模板
-        FileInputStream fileIn = new FileInputStream("D:\\test.xls");
-        HSSFWorkbook wb = new HSSFWorkbook(fileIn);
-        HSSFSheet sheet = wb.getSheetAt(0);
-        //循环
-        for (int i = 0; i < 10; i++) {
-            // 2、填写数据
-            sheet.createRow(0).createCell(0).setCellValue( "【2020】年【"+(cnt)+"】月服务支撑结算单" );
-            // 3、保存到输出流
-            ByteArrayOutputStream fileOut = new ByteArrayOutputStream();
-            wb.write(fileOut);
-            // 4、输出流转换成输入流
-            byte[] content = fileOut.toByteArray();
-            ByteArrayInputStream is = new ByteArrayInputStream(content);
-            BufferedInputStream in = new BufferedInputStream(is);
-            // 5、放到压缩流--填写待文件的名称
-            zos.putNextEntry(new ZipEntry("test-wdq"+(cnt++)+".xls"));
-            while ((len = in.read(buf)) != -1) {
-                zos.write(buf, 0, len);
-            }
-            // 关闭各种流
-            zos.flush();
-            fileOut.close();
-            zos.closeEntry();
-        }
-        wb.close();
-        zos.close();
-        out.close();
-        // 将压缩输出流转换成输入流
-        byte[] content = out.toByteArray();
-        ByteArrayInputStream is = new ByteArrayInputStream(content);
-        BufferedInputStream in = new BufferedInputStream(is);
-//---------------------------------------------------------------------------------------------------------------------
-        ossClient.putObject(bucketName, "wdq.zip", in);
+        // 上传文件到指定的存储空间（bucketName）并将其保存为指定的文件名称（objectName）。
+        String content = "Hello OSS";
+        ossClient.putObject(bucketName, objectName, new ByteArrayInputStream(content.getBytes()));
+        // 关闭OSSClient。
+        ossClient.shutdown();
+    }
+
+    /**
+     * 测试阿里oss删除
+     * @throws IOException
+     */
+    @Test
+    public void testDelete() throws IOException {
+        // Endpoint以杭州为例，其它Region请按实际情况填写。
+        String endpoint = "oss-cn-beijing.aliyuncs.com";
+        String accessKeyId = "LTAI4Fyn7XUM54taNPEggjkx";
+        String accessKeySecret = "AFJufOvaKeCie9PmthohuUBcu0xom4";
+        String bucketName = "onebook-wdq";
+        // <yourObjectName>表示删除OSS文件时需要指定包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
+        String objectName = "user/123.txt";
+        // 创建OSSClient实例。
+        OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+        // 删除文件。
+        ossClient.deleteObject(bucketName, objectName);
         // 关闭OSSClient。
         ossClient.shutdown();
     }

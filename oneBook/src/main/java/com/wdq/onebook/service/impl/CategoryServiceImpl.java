@@ -35,8 +35,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return page;
     }
 
-
-    private void dealChildren(List<CategoryEntity> cates) {
+    /**
+     * 获取所有的子分类
+     * @param cates
+     */
+    @Override
+    public void dealChildren(List<CategoryEntity> cates) {
         for (int i = 0; i < cates.size(); i++) {
             CategoryEntity cate = cates.get(i);
             List<CategoryEntity> children = baseMapper.selectList(new QueryWrapper<CategoryEntity>().eq("parent",cate.getCategoryId()));
