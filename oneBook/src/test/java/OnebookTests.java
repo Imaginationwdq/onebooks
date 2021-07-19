@@ -401,10 +401,10 @@ public class OnebookTests {
     @Test
     public void testDelete() throws IOException {
         // Endpoint以杭州为例，其它Region请按实际情况填写。
-        String endpoint = "oss-cn-beijing.aliyuncs.com";
-        String accessKeyId = "LTAI4Fyn7XUM54taNPEggjkx";
-        String accessKeySecret = "AFJufOvaKeCie9PmthohuUBcu0xom4";
-        String bucketName = "onebook-wdq";
+        String endpoint = "";
+        String accessKeyId = "";
+        String accessKeySecret = "";
+        String bucketName = "";
         // <yourObjectName>表示删除OSS文件时需要指定包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
         String objectName = "user/123.txt";
         // 创建OSSClient实例。
